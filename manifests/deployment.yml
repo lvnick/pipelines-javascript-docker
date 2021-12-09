@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: lvnickpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lvnickpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: lvnickpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: lvnickpipelinesjavascriptdocker 
+          image: recovereez.azurecr.io/lvnickpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
